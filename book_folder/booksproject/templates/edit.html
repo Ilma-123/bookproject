@@ -1,0 +1,17 @@
+<div class="container"
+     style="background-color:lightblue;
+            margin-left:500px;
+            width:400px;
+            height:700px;
+            border-radius:50px;
+            padding-left:50px;
+            ">
+
+
+<h2 style="padding:10px;">make your changes here</h2>
+<form method="POST" enctype="multipart/form-data">
+   {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" style="">
+</form>
+</div>

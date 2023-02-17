@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        {% for i in book_list %}
+        <div class="col-md-4 ">
+        <div class="card m-5 " style="width: 18rem ; height:90%">
+
+        <img class="card-img-top " src="{{i.img.url}}" alt="Card image cap" width="250px" height="450px">
+
+        <div class="card-body" style="display:flex;flex-direction:column">
+        <h2 class="card-title">{{i.name}}</h2>
+        <p class="card-text">{{i.desc}}</p>
+        <div class="btn"style="margin-top:auto;margin-left:-150px;">
+        <h5 class="card-text">price:{{i.price}}</h5>
+        <a href="{% url 'bookapp:detail' i.id %}" class="btn btn-primary">click for more</a>
+        </div>
+        </div>
+        </div>
+    </div>
+        {% endfor %}
+</div>
+</div>
+
+<img src="{{i.img.url}}" width="100" height="100">
+<a href="">&nbsp&nbsp{{i.name}}<br></a>
+<!--{{i.id}}-->
+<!--{{i.name}}<br>-->
+<!--{{i.author}}<br>-->
+<!--{{i.desc}}<br>-->
+<!--{{i.year}}<br>-->
+<!--{{i.price}}<br>-->
+
+
+{% endblock %}
